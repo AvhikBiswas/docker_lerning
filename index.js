@@ -1,15 +1,15 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
-const port=8000;
+const port = process.env.PORT | 8000;
 
-app.get('/',(req,res)=>{
-    req.status(201).json({
-        mess:'server running',
-        err:false,
-    })
-})
+app.get("/", (req, res) => {
+  req.status(201).json({
+    mess: "server running",
+    err: false,
+  });
+});
 
-app.listen(port,()=>{
-    console.log('server running on '+ port);
-})
+app.listen(port, () => {
+  console.log("server running on " + port);
+});
